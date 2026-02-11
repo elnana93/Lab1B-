@@ -1,0 +1,21 @@
+
+
+
+
+“Acknowledged alarm via CLI: lab1b-db-connection-failures entered ALARM at <timestamp> with reason <StateReason>.”
+
+
+“Confirmed failures in /lab1b/app logs showing DB connection errors (timestamps align with alarm transition).”
+
+
+“Validated DB host/port/dbname are sourced from SSM Parameter Store and present.”
+
+
+“Validated DB credentials are stored in Secrets Manager (secret exists, expected keys present). Suspected drift if connectivity is OK but auth fails.”
+
+
+“Recovered by restarting the RDS, which cleared DB connection failures and returned alarm to OK.”
+
+
+“No redeploy performed. Followed observation-first: alarm → logs → config sources (SSM/Secrets) → targeted fix.”
+
